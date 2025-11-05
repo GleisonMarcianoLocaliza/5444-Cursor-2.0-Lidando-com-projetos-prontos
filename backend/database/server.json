@@ -1,0 +1,548 @@
+{
+  "category": [
+    {
+      "id": "1",
+      "title": "Sedan",
+      "description": "Carros sedãs confortáveis e espaçosos, ideais para viagens longas e famílias"
+    },
+    {
+      "id": "2",
+      "title": "Hatch",
+      "description": "Carros compactos e econômicos, perfeitos para uso urbano e estacionamento fácil"
+    },
+    {
+      "id": "3",
+      "title": "Minivan",
+      "description": "Veículos versáteis com capacidade para 7 passageiros, ideais para famílias grandes"
+    },
+    {
+      "id": "4",
+      "title": "SUV",
+      "description": "Utilitários esportivos robustos, perfeitos para aventuras e terrenos variados"
+    },
+    {
+      "id": "5",
+      "title": "Cultura Pop",
+      "description": "Carros icônicos do cinema, TV e cultura pop que marcaram gerações"
+    }
+  ],
+  "car": [
+    {
+      "id": "1",
+      "title": "Fiat Cronos",
+      "shortTitle": "Cronos",
+      "description": "Sedan confortável e espaçoso, ideal para viagens em família",
+      "categoryId": 1,
+      "price": 333,
+      "image": "/car-models/fiat_cronos.png",
+      "specs": {
+        "passengers": 5,
+        "transmission": "Automático",
+        "fuel": "Flex",
+        "year": 2024,
+        "airConditioning": true,
+        "trunk": "525L"
+      },
+      "features": [
+        "Ar condicionado",
+        "Direção elétrica",
+        "Vidros elétricos",
+        "Travas elétricas",
+        "Airbags",
+        "Freios ABS",
+        "Bluetooth",
+        "USB"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Fiat Mobi",
+      "shortTitle": "Mobi",
+      "description": "Compacto econômico perfeito para cidade",
+      "categoryId": 2,
+      "price": 80,
+      "image": "/car-models/fiat_mobi.png",
+      "specs": {
+        "passengers": 4,
+        "transmission": "Manual",
+        "fuel": "Flex",
+        "year": 2024,
+        "airConditioning": true,
+        "trunk": "230L"
+      },
+      "features": [
+        "Ar condicionado",
+        "Direção hidráulica",
+        "Vidros dianteiros elétricos",
+        "Travas elétricas",
+        "Airbags",
+        "Freios ABS"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Chevrolet Spin",
+      "shortTitle": "Spin",
+      "description": "Minivan versátil com 7 lugares para toda a família",
+      "categoryId": 3,
+      "price": 180,
+      "image": "/car-models/gm_spin.png",
+      "specs": {
+        "passengers": 7,
+        "transmission": "Automático",
+        "fuel": "Flex",
+        "year": 2024,
+        "airConditioning": true,
+        "trunk": "710L"
+      },
+      "features": [
+        "Ar condicionado",
+        "Direção elétrica",
+        "Vidros elétricos",
+        "Travas elétricas",
+        "Airbags",
+        "Freios ABS",
+        "Sensor de estacionamento",
+        "Controle de tração"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Hyundai HB20",
+      "shortTitle": "HB20",
+      "description": "Hatch moderno e tecnológico com ótimo custo-benefício",
+      "categoryId": 2,
+      "price": 120,
+      "image": "/car-models/hb20.png",
+      "specs": {
+        "passengers": 5,
+        "transmission": "Manual",
+        "fuel": "Flex",
+        "year": 2024,
+        "airConditioning": true,
+        "trunk": "300L"
+      },
+      "features": [
+        "Ar condicionado",
+        "Direção hidráulica",
+        "Vidros elétricos",
+        "Travas elétricas",
+        "Airbags",
+        "Freios ABS",
+        "Computador de bordo"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Honda City",
+      "shortTitle": "City",
+      "description": "Sedan compacto sofisticado com design elegante",
+      "categoryId": 1,
+      "price": 140,
+      "image": "/car-models/honda_city.png",
+      "specs": {
+        "passengers": 5,
+        "transmission": "Automático CVT",
+        "fuel": "Flex",
+        "year": 2024,
+        "airConditioning": true,
+        "trunk": "519L"
+      },
+      "features": [
+        "Ar condicionado",
+        "Direção elétrica",
+        "Vidros elétricos",
+        "Travas elétricas",
+        "Airbags",
+        "Freios ABS",
+        "Controle de cruzeiro",
+        "Sensor de ré"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Honda City Sedan",
+      "shortTitle": "City Sedan",
+      "description": "Versão sedan premium do City com mais conforto",
+      "categoryId": 1,
+      "price": 160,
+      "image": "/car-models/honda_city_sedan.png",
+      "specs": {
+        "passengers": 5,
+        "transmission": "Automático CVT",
+        "fuel": "Flex",
+        "year": 2024,
+        "airConditioning": true,
+        "trunk": "519L"
+      },
+      "features": [
+        "Ar condicionado digital",
+        "Direção elétrica",
+        "Vidros elétricos",
+        "Travas elétricas",
+        "Airbags",
+        "Freios ABS",
+        "Controle de cruzeiro",
+        "Sensor de ré",
+        "Câmera de ré"
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Chevrolet Onix",
+      "shortTitle": "Onix",
+      "description": "Hatch líder de vendas com tecnologia e economia",
+      "categoryId": 2,
+      "price": 110,
+      "image": "/car-models/onix.png",
+      "specs": {
+        "passengers": 5,
+        "transmission": "Manual",
+        "fuel": "Flex",
+        "year": 2024,
+        "airConditioning": true,
+        "trunk": "303L"
+      },
+      "features": [
+        "Ar condicionado",
+        "Direção elétrica",
+        "Vidros elétricos",
+        "Travas elétricas",
+        "Airbags",
+        "Freios ABS",
+        "Computador de bordo"
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Jeep Renegade",
+      "shortTitle": "Renegade",
+      "description": "SUV aventureiro pronto para qualquer terreno",
+      "categoryId": 4,
+      "price": 220,
+      "image": "/car-models/renegade.png",
+      "specs": {
+        "passengers": 5,
+        "transmission": "Automático",
+        "fuel": "Flex",
+        "year": 2024,
+        "airConditioning": true,
+        "trunk": "470L"
+      },
+      "features": [
+        "Ar condicionado",
+        "Direção elétrica",
+        "Vidros elétricos",
+        "Travas elétricas",
+        "Airbags",
+        "Freios ABS",
+        "Controle de tração",
+        "Sensor de estacionamento",
+        "Multimídia touchscreen"
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Volkswagen T-Cross",
+      "shortTitle": "T-Cross",
+      "description": "SUV compacto urbano com design moderno",
+      "categoryId": 4,
+      "price": 200,
+      "image": "/car-models/vw_t_cross.png",
+      "specs": {
+        "passengers": 5,
+        "transmission": "Automático",
+        "fuel": "Flex",
+        "year": 2024,
+        "airConditioning": true,
+        "trunk": "420L"
+      },
+      "features": [
+        "Ar condicionado digital",
+        "Direção elétrica",
+        "Vidros elétricos",
+        "Travas elétricas",
+        "Airbags",
+        "Freios ABS",
+        "Controle de tração",
+        "Sensor de estacionamento",
+        "Central multimídia"
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Dodge A100",
+      "shortTitle": "Mystery Machine",
+      "description": "A van psicodélica da turma do mistério - Scooby-Doo",
+      "categoryId": 5,
+      "price": 300,
+      "image": "/car-models/mystery_machine_van.png",
+      "specs": {
+        "passengers": 6,
+        "transmission": "Manual",
+        "fuel": "Gasolina",
+        "year": 1970,
+        "airConditioning": false,
+        "trunk": "Equipamentos de mistério"
+      },
+      "features": [
+        "Design psicodélico",
+        "Equipamentos de investigação",
+        "Espaço para a turma",
+        "Visual colorido",
+        "Símbolo da amizade",
+        "Aventuras"
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Batmóvel",
+      "shortTitle": "Batmóvel",
+      "description": "Diversas versões, mas todas com o mesmo símbolo: poder e tecnologia",
+      "categoryId": 5,
+      "price": 800,
+      "image": "/car-models/batmovel.png",
+      "specs": {
+        "passengers": 2,
+        "transmission": "Automático",
+        "fuel": "Turbina",
+        "year": 2023,
+        "airConditioning": true,
+        "trunk": "Arsenal completo"
+      },
+      "features": [
+        "Escudo balístico",
+        "Foguetes",
+        "Ganchos de escalada",
+        "Modo perseguição",
+        "Sistema de defesa",
+        "Computador de bordo"
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Chevrolet Camaro",
+      "shortTitle": "Bumblebee",
+      "description": "De muscle car a Autobot heróico - Transformers",
+      "categoryId": 5,
+      "price": 650,
+      "image": "/car-models/chevrolet_camaro.png",
+      "specs": {
+        "passengers": 4,
+        "transmission": "Automático",
+        "fuel": "Energon",
+        "year": 2010,
+        "airConditioning": true,
+        "trunk": "Modo Autobot"
+      },
+      "features": [
+        "Transformação",
+        "Proteção humana",
+        "Força sobre-humana",
+        "Lealdade",
+        "Design amarelo",
+        "Coragem"
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Chevrolet Impala 1967",
+      "shortTitle": "Baby",
+      "description": "O carro quase tão importante quanto os irmãos Winchester - Supernatural",
+      "categoryId": 5,
+      "price": 450,
+      "image": "/car-models/chevrolet_impala_1967.png",
+      "specs": {
+        "passengers": 5,
+        "transmission": "Manual",
+        "fuel": "Gasolina",
+        "year": 1967,
+        "airConditioning": false,
+        "trunk": "Arsenal sobrenatural"
+      },
+      "features": [
+        "Arsenal completo",
+        "Proteção sobrenatural",
+        "História familiar",
+        "Resistência extrema",
+        "Símbolo de união",
+        "Design clássico"
+      ]
+    },
+    {
+      "id": "14",
+      "title": "DeLorean DMC-12",
+      "shortTitle": "DeLorean",
+      "description": "Viagem no tempo nunca foi tão estilosa",
+      "categoryId": 5,
+      "price": 500,
+      "image": "/car-models/delorean_dmc12.png",
+      "specs": {
+        "passengers": 2,
+        "transmission": "Manual",
+        "fuel": "Gasolina",
+        "year": 1981,
+        "airConditioning": false,
+        "trunk": "N/A - Portal do tempo"
+      },
+      "features": [
+        "Portal do tempo",
+        "Asas de gaviota",
+        "Portas suicidas",
+        "Capacitor de fluxo",
+        "Velocidade: 88 mph",
+        "Destino: Futuro"
+      ]
+    },
+    {
+      "id": "15",
+      "title": "Plymouth Fury 1958",
+      "shortTitle": "Christine",
+      "description": "Um carro com vontade própria... e sede de sangue",
+      "categoryId": 5,
+      "price": 350,
+      "image": "/car-models/plymouth_fury_1958.png",
+      "specs": {
+        "passengers": 5,
+        "transmission": "Automático",
+        "fuel": "Gasolina",
+        "year": 1958,
+        "airConditioning": false,
+        "trunk": "Vontade própria"
+      },
+      "features": [
+        "Auto-reparo",
+        "Vontade própria",
+        "Proteção possessiva",
+        "Design vermelho",
+        "Personalidade",
+        "Cuidado com o dono"
+      ]
+    },
+    {
+      "id": "16",
+      "title": "Pontiac Trans Am 1982",
+      "shortTitle": "KITT",
+      "description": "O carro falante mais inteligente da TV - A Super Máquina",
+      "categoryId": 5,
+      "price": 600,
+      "image": "/car-models/pontiac_trans_am_1982.png",
+      "specs": {
+        "passengers": 2,
+        "transmission": "Automático",
+        "fuel": "Gasolina",
+        "year": 1982,
+        "airConditioning": true,
+        "trunk": "Sistema de segurança"
+      },
+      "features": [
+        "IA avançada",
+        "Conversação",
+        "Modo perseguição",
+        "Escudo molecular",
+        "Turbo boost",
+        "Sistema de auto-reparo"
+      ]
+    },
+    {
+      "id": "17",
+      "title": "Volkswagen Fusca 1963",
+      "shortTitle": "Herbie",
+      "description": "O Fusquinha com alma e muita personalidade",
+      "categoryId": 5,
+      "price": 200,
+      "image": "/car-models/volkswagen_fusca_1963.png",
+      "specs": {
+        "passengers": 4,
+        "transmission": "Manual",
+        "fuel": "Gasolina",
+        "year": 1963,
+        "airConditioning": false,
+        "trunk": "Personalidade própria"
+      },
+      "features": [
+        "Personalidade própria",
+        "Auto-condução",
+        "Emoções",
+        "Proteção ao dono",
+        "Design clássico",
+        "Alma de carro"
+      ]
+    },
+    {
+      "id": "18",
+      "title": "Aston Martin DB5",
+      "shortTitle": "DB5",
+      "description": "Classe, elegância e gadgets espiões do 007",
+      "categoryId": 5,
+      "price": 1000,
+      "image": "/car-models/aston_martin.png",
+      "specs": {
+        "passengers": 2,
+        "transmission": "Manual",
+        "fuel": "Gasolina",
+        "year": 1964,
+        "airConditioning": false,
+        "trunk": "Gadgets espiões"
+      },
+      "features": [
+        "Ejetor de assento",
+        "Metralhadora frontal",
+        "Escudo traseiro",
+        "Pneus com pregos",
+        "Faróis especiais",
+        "Classe britânica"
+      ]
+    },
+    {
+      "id": "19",
+      "title": "Cadillac Miller Meteor 1959",
+      "shortTitle": "Ecto-1",
+      "description": "Sirene inconfundível e visual retrô dos Caça-Fantasmas",
+      "categoryId": 5,
+      "price": 400,
+      "image": "/car-models/cadillac_miller_meteor_1959.png",
+      "specs": {
+        "passengers": 4,
+        "transmission": "Manual",
+        "fuel": "Gasolina",
+        "year": 1959,
+        "airConditioning": false,
+        "trunk": "Equipamentos paranormais"
+      },
+      "features": [
+        "Sirene especial",
+        "Equipamentos de captura",
+        "Proton pack",
+        "Detector de fantasmas",
+        "Visual retrô",
+        "Sistema de limpeza"
+      ]
+    },
+    {
+      "id": "20",
+      "title": "Dodge Charger R/T 1970",
+      "shortTitle": "Charger R/T",
+      "description": "Potência bruta e símbolo da família - Velozes e Furiosos",
+      "categoryId": 5,
+      "price": 700,
+      "image": "/car-models/dodge_charger_rt_1970.png",
+      "specs": {
+        "passengers": 5,
+        "transmission": "Manual",
+        "fuel": "Gasolina",
+        "year": 1970,
+        "airConditioning": false,
+        "trunk": "Família"
+      },
+      "features": [
+        "Motor V8 Hemi",
+        "Potência bruta",
+        "Design muscle car",
+        "Velocidade extrema",
+        "Símbolo da família",
+        "Resistência"
+      ]
+    }
+  ]
+}
