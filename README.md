@@ -1,6 +1,21 @@
+<img width="1250" height="625" alt="readme_5444 " src="https://github.com/user-attachments/assets/50543904-a5d1-4904-8f2c-0af2074b1c72" />
+
+# 📚 Informações do curso
+
+Domine o Cursor 2.0 para trabalhar com projetos prontos de forma rápida e inteligente. Aprenda a automatizar tarefas, criar regras, usar o Plan Mode para planejar funcionalidades e explorar o código com Discovery. Utilize recursos avançados como Codebase Indexing, múltiplos agentes e Worktrees para testar e refatorar com segurança. Transforme o Cursor no seu aliado para entender, corrigir e evoluir projetos reais.
+
+[Cursor: Lidando com projetos prontos](https://www.alura.com.br/busca?query=Cursor%3A+Lidando+com+projetos+prontos)
+
+
 # 🚗 Locadora Loucadora
 
 Sistema de locação de carros desenvolvido com React (frontend) e Node.js (backend).
+
+
+https://github.com/user-attachments/assets/11bd545a-c3a9-4787-b814-da90507296e0
+
+
+
 
 ## 📁 Estrutura do Projeto
 
