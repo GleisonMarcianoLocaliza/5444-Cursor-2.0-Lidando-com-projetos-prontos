@@ -1,0 +1,36 @@
+---
+description: Verificar se a home do app ainda funciona após implementação de nova função
+alwaysApply: true
+---
+
+# Verificação da Home após novas implementações
+
+Sempre que uma nova função ou funcionalidade for implementada no projeto, verifique se a página Home continua funcionando corretamente antes de considerar a tarefa concluída.
+
+## Checklist de verificação
+
+Após implementar qualquer nova função, confirme os seguintes itens da página `frontend/src/pages/Home.tsx`:
+
+- [ ] O servidor está rodando (`npm run dev` na raiz do projeto)
+- [ ] A home carrega sem erros no console do navegador em http://localhost:5173
+- [ ] O `Header` e o `Footer` são renderizados corretamente
+- [ ] O `SearchBox` e o `Banner` aparecem na página
+- [ ] A seção "Carros Disponíveis" exibe os cards ou o skeleton de carregamento
+- [ ] A chamada `getRandomCars(6)` via `CarsContext` não retorna erro
+- [ ] O backend responde em http://localhost:3001/health
+
+## Componentes críticos da Home
+
+A Home depende destes componentes e contextos — qualquer mudança neles exige nova verificação:
+
+- `Header`, `Footer`, `SearchBox`, `Banner`, `CarCard`, `CarCardSkeleton` — em `frontend/src/components/`
+- `useCars` / `CarsContext` — em `frontend/src/contexts/`
+- Endpoint `GET /car` do backend
+
+## Como verificar rapidamente
+
+1. Abra http://localhost:5173 no navegador
+2. Confirme que os carros são exibidos (ou o skeleton durante o carregamento)
+3. Abra o DevTools → Console e certifique-se de que não há erros em vermelho relacionados à Home
+
+Se qualquer item falhar, corrija antes de finalizar a implementação.
