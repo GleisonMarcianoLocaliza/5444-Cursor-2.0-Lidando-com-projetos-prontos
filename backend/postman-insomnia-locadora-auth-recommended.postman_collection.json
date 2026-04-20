@@ -1,0 +1,180 @@
+{
+  "info": {
+    "name": "Locadora — Auth e GET /car/recommended",
+    "description": "Collection para testar autenticação e o endpoint de carros recomendados.\n\n**Uso:**\n1. Confirme `baseUrl` (padrão `http://localhost:3001`).\n2. Ajuste `testEmail` e `testPassword` se necessário.\n3. Execute **Login** primeiro — o token JWT é salvo automaticamente na variável `token`.\n4. Execute as demais requisições autenticadas.\n\n**Insomnia:** Arquivo → Importar → cole este JSON (formato Postman v2.1).\n\n**Postman:** Import → upload deste arquivo.\n\nCredenciais padrão são apenas para ambiente local de desenvolvimento.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3001" },
+    { "key": "token", "value": "" },
+    { "key": "testEmail", "value": "gleison.alexander@gmail.com" },
+    { "key": "testPassword", "value": "40028922" },
+    { "key": "recommendedLimit", "value": "6" }
+  ],
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 200 || pm.response.code === 201) {",
+                  "    try {",
+                  "        var data = pm.response.json();",
+                  "        if (data.token) {",
+                  "            pm.collectionVariables.set('token', data.token);",
+                  "            console.log('Token salvo na variável {{token}}');",
+                  "        }",
+                  "    } catch (e) { console.warn(e); }",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{testEmail}}\",\n  \"password\": \"{{testPassword}}\"\n}"
+            },
+            "url": "{{baseUrl}}/auth/login",
+            "description": "Retorna JWT em `token`. No Postman, o teste salva o token na variável de coleção `token` para as próximas requisições."
+          },
+          "response": []
+        },
+        {
+          "name": "Obter usuário atual (me)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }]
+            },
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/auth/me",
+            "description": "Requer header `Authorization: Bearer {{token}}`. Execute Login antes."
+          },
+          "response": []
+        },
+        {
+          "name": "Registrar usuário",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 201) {",
+                  "    try {",
+                  "        var data = pm.response.json();",
+                  "        if (data.token) {",
+                  "            pm.collectionVariables.set('token', data.token);",
+                  "            console.log('Token salvo na variável {{token}}');",
+                  "        }",
+                  "    } catch (e) { console.warn(e); }",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Usuário Teste\",\n  \"email\": \"novo.usuario.exemplo@email.com\",\n  \"password\": \"40028922\"\n}"
+            },
+            "url": "{{baseUrl}}/auth/register",
+            "description": "Cria conta e também retorna `token`. Altere o email se já existir no banco. Opcional se você já usa Login com usuário existente."
+          },
+          "response": []
+        },
+        {
+          "name": "Validar senha atual",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }]
+            },
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"currentPassword\": \"{{testPassword}}\"\n}"
+            },
+            "url": "{{baseUrl}}/auth/validate-password",
+            "description": "Body: `currentPassword` — confere se a senha confere com a cadastrada."
+          },
+          "response": []
+        },
+        {
+          "name": "Atualizar perfil",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }]
+            },
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Nome Atualizado\",\n  \"email\": \"{{testEmail}}\",\n  \"currentPassword\": \"{{testPassword}}\"\n}"
+            },
+            "url": "{{baseUrl}}/auth/update-profile",
+            "description": "Campos obrigatórios: `name`, `email`. Para trocar senha, inclua também `newPassword` e `currentPassword`."
+          },
+          "response": []
+        }
+      ],
+      "description": "Rotas em `/auth`. Use **Login** para obter e guardar o JWT."
+    },
+    {
+      "name": "Carros",
+      "item": [
+        {
+          "name": "Carros recomendados (favoritos)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }]
+            },
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/car/recommended?limit={{recommendedLimit}}",
+            "description": "**GET /car/recommended** — Requer autenticação.\n\n- Com favoritos: até `limit` carros da categoria mais frequente entre os últimos 6 favoritos.\n- Sem favoritos: carros aleatórios (como `/car/random`).\n\nQuery opcional: `limit` (padrão 6, máximo 50)."
+          },
+          "response": []
+        },
+        {
+          "name": "Carros recomendados (sem query — padrão backend)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }]
+            },
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/car/recommended",
+            "description": "Mesmo endpoint sem parâmetros; o backend usa limite padrão 6."
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoint novo: recomendação baseada em favoritos (JWT obrigatório)."
+    }
+  ]
+}

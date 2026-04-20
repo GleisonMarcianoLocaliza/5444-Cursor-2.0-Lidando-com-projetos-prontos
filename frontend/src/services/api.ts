@@ -75,6 +75,14 @@ export const api = {
     return response.json();
   },
 
+  async getCarsByLocation(locationId: number): Promise<Car[]> {
+    const response = await fetch(`${API_BASE_URL}/car?locationId=${locationId}`);
+    if (!response.ok) {
+      throw new Error('Failed to fetch cars by location');
+    }
+    return response.json();
+  },
+
   async getLocations(): Promise<Location[]> {
     const response = await fetch(`${API_BASE_URL}/locations`);
     if (!response.ok) {

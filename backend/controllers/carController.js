@@ -1,30 +1,53 @@
 const { runQuery, getQuery, allQuery } = require('../database');
 
-// GET /car - Listar todos os carros (com filtro opcional por categoria e busca)
+// GET /car - Listar todos os carros (filtros opcionais: categoryId, search, locationId)
 const getAllCars = async (req, res) => {
   try {
-    const { categoryId, search } = req.query;
-    let sql = 'SELECT * FROM cars';
+    const { categoryId, search, locationId } = req.query;
+    const hasLocation = locationId !== undefined && locationId !== '';
+
+    let sql;
     let params = [];
-    let conditions = [];
-    
-    if (categoryId) {
-      conditions.push('categoryId = ?');
-      params.push(categoryId);
+
+    if (hasLocation) {
+      const lid = parseInt(locationId, 10);
+      if (isNaN(lid) || lid <= 0) {
+        return res.status(400).json({ error: 'locationId deve ser um número positivo' });
+      }
+      sql =
+        'SELECT DISTINCT cars.* FROM cars ' +
+        'INNER JOIN car_locations cl ON cl.carId = cars.id ' +
+        'WHERE cl.locationId = ?';
+      params = [lid];
+
+      if (categoryId) {
+        sql += ' AND cars.categoryId = ?';
+        params.push(categoryId);
+      }
+      if (search) {
+        sql += ' AND (cars.title LIKE ? OR cars.shortTitle LIKE ? OR cars.description LIKE ?)';
+        const searchTerm = `%${search}%`;
+        params.push(searchTerm, searchTerm, searchTerm);
+      }
+      sql += ' ORDER BY cars.id';
+    } else {
+      sql = 'SELECT * FROM cars';
+      const conditions = [];
+      if (categoryId) {
+        conditions.push('categoryId = ?');
+        params.push(categoryId);
+      }
+      if (search) {
+        conditions.push('(title LIKE ? OR shortTitle LIKE ? OR description LIKE ?)');
+        const searchTerm = `%${search}%`;
+        params.push(searchTerm, searchTerm, searchTerm);
+      }
+      if (conditions.length > 0) {
+        sql += ' WHERE ' + conditions.join(' AND ');
+      }
+      sql += ' ORDER BY id';
     }
-    
-    if (search) {
-      conditions.push('(title LIKE ? OR shortTitle LIKE ? OR description LIKE ?)');
-      const searchTerm = `%${search}%`;
-      params.push(searchTerm, searchTerm, searchTerm);
-    }
-    
-    if (conditions.length > 0) {
-      sql += ' WHERE ' + conditions.join(' AND ');
-    }
-    
-    sql += ' ORDER BY id';
-    
+
     const cars = await allQuery(sql, params);
     
     // Parsear JSON fields
@@ -41,6 +64,77 @@ const getAllCars = async (req, res) => {
   }
 };
 
+/**
+ * Entre os últimos favoritos, escolhe a categoria mais frequente.
+ * Em empate, usa a categoria do favorito mais recente entre as empatadas.
+ */
+function pickDominantCategoryFromFavorites(rows) {
+  const counts = {};
+  for (const row of rows) {
+    const cid = row.categoryId;
+    counts[cid] = (counts[cid] || 0) + 1;
+  }
+  const max = Math.max(...Object.values(counts));
+  const tied = Object.entries(counts)
+    .filter(([, c]) => c === max)
+    .map(([id]) => Number(id));
+  if (tied.length === 1) {
+    return tied[0];
+  }
+  for (const row of rows) {
+    if (tied.includes(row.categoryId)) {
+      return row.categoryId;
+    }
+  }
+  return tied[0];
+}
+
+const parseCarsJson = (cars) =>
+  cars.map((car) => ({
+    ...car,
+    specs: JSON.parse(car.specs),
+    features: JSON.parse(car.features)
+  }));
+
+// GET /car/recommended - Até 6 carros sugeridos pela categoria dos últimos favoritos (autenticado)
+const getRecommendedCars = async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const limit = parseInt(req.query.limit, 10);
+    const limitNumber = Number.isNaN(limit) || limit <= 0 ? 6 : Math.min(limit, 50);
+
+    const recentFavorites = await allQuery(
+      `
+      SELECT c.categoryId
+      FROM favorites f
+      INNER JOIN cars c ON c.id = f.carId
+      WHERE f.userId = ?
+      ORDER BY f.createdAt DESC
+      LIMIT 6
+    `,
+      [userId]
+    );
+
+    if (recentFavorites.length === 0) {
+      const cars = await allQuery('SELECT * FROM cars ORDER BY RANDOM() LIMIT ?', [
+        limitNumber
+      ]);
+      return res.json(parseCarsJson(cars));
+    }
+
+    const categoryId = pickDominantCategoryFromFavorites(recentFavorites);
+    const cars = await allQuery(
+      'SELECT * FROM cars WHERE categoryId = ? ORDER BY RANDOM() LIMIT ?',
+      [categoryId, limitNumber]
+    );
+
+    res.json(parseCarsJson(cars));
+  } catch (error) {
+    console.error('Erro ao buscar carros recomendados:', error);
+    res.status(500).json({ error: 'Erro interno do servidor' });
+  }
+};
+
 // GET /car/random - Buscar 6 carros aleatórios
 const getRandomCars = async (req, res) => {
   try {
@@ -53,15 +147,8 @@ const getRandomCars = async (req, res) => {
     
     const sql = 'SELECT * FROM cars ORDER BY RANDOM() LIMIT ?';
     const cars = await allQuery(sql, [limitNumber]);
-    
-    // Parsear JSON fields
-    const parsedCars = cars.map(car => ({
-      ...car,
-      specs: JSON.parse(car.specs),
-      features: JSON.parse(car.features)
-    }));
-    
-    res.json(parsedCars);
+
+    res.json(parseCarsJson(cars));
   } catch (error) {
     console.error('Erro ao buscar carros aleatórios:', error);
     res.status(500).json({ error: 'Erro interno do servidor' });
@@ -232,6 +319,7 @@ const deleteCar = async (req, res) => {
 
 module.exports = {
   getAllCars,
+  getRecommendedCars,
   getRandomCars,
   getCarById,
   createCar,

@@ -48,12 +48,17 @@ export function SearchBox() {
       // Build search query with location
       const searchQuery = pickupLocationData?.name || pickupLocation.trim();
 
-      // Navigate to search page with query
-      navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
+      // Busca por unidade: locationId na API; q apenas para título na página de busca
+      const locationIdParam = encodeURIComponent(pickupLocation.trim());
+      navigate(
+        `/search?locationId=${locationIdParam}&q=${encodeURIComponent(searchQuery)}`
+      );
     } catch (error) {
       console.error('Erro ao processar busca:', error);
       // Fallback: navegar sem salvar dados
-      navigate(`/search?q=${encodeURIComponent(pickupLocation)}`);
+      navigate(
+        `/search?locationId=${encodeURIComponent(pickupLocation.trim())}&q=${encodeURIComponent(pickupLocation.trim())}`
+      );
     }
   };
 

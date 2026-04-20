@@ -105,6 +105,22 @@ const initDatabase = () => {
         }
       });
 
+      // Tabela de junção: quais carros estão disponíveis em quais unidades
+      db.run(`
+        CREATE TABLE IF NOT EXISTS car_locations (
+          carId INTEGER NOT NULL,
+          locationId INTEGER NOT NULL,
+          PRIMARY KEY (carId, locationId),
+          FOREIGN KEY (carId) REFERENCES cars (id) ON DELETE CASCADE,
+          FOREIGN KEY (locationId) REFERENCES locations (id) ON DELETE CASCADE
+        )
+      `, (err) => {
+        if (err) {
+          console.error('Erro ao criar tabela car_locations:', err.message);
+          reject(err);
+        }
+      });
+
       // Criar tabela reservations
       db.run(`
         CREATE TABLE IF NOT EXISTS reservations (

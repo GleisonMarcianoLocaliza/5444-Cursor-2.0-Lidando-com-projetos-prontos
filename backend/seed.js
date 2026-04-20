@@ -15,7 +15,8 @@ const seedDatabase = async (shouldCloseDatabase = true) => {
       await initDatabase();
     }
     
-    // Limpar dados existentes
+    // Limpar dados existentes (car_locations antes de cars por integridade)
+    await runQuery('DELETE FROM car_locations');
     await runQuery('DELETE FROM cars');
     await runQuery('DELETE FROM categories');
     

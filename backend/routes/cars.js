@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const { authenticateToken } = require('../middleware/auth');
 const {
   getAllCars,
+  getRecommendedCars,
   getRandomCars,
   getCarById,
   createCar,
@@ -11,6 +13,9 @@ const {
 
 // GET /car - Listar todos os carros (com filtro opcional por categoria)
 router.get('/', getAllCars);
+
+// GET /car/recommended - Sugestões com base nos últimos favoritos (requer Bearer token)
+router.get('/recommended', authenticateToken, getRecommendedCars);
 
 // GET /car/random - Buscar carros aleatórios
 router.get('/random', getRandomCars);

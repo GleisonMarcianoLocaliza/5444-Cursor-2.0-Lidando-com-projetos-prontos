@@ -1,0 +1,192 @@
+﻿car_id;carro;location_id;cidade;unidade
+1;Cronos;1;São Paulo;Unidade São Paulo – Avenida Paulista
+1;Cronos;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+1;Cronos;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+1;Cronos;4;Fortaleza;Racha Fortaleza – Beira Mar
+1;Cronos;5;Curitiba;Frost Drive – Curitiba Center
+1;Cronos;6;Belo Horizonte;DeLorean BH – Savassi Station
+1;Cronos;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+1;Cronos;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+1;Cronos;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+1;Cronos;10;Manaus;Loucadora Manaus – Ponta Negra
+2;Mobi;1;São Paulo;Unidade São Paulo – Avenida Paulista
+2;Mobi;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+2;Mobi;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+2;Mobi;4;Fortaleza;Racha Fortaleza – Beira Mar
+2;Mobi;5;Curitiba;Frost Drive – Curitiba Center
+2;Mobi;6;Belo Horizonte;DeLorean BH – Savassi Station
+2;Mobi;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+2;Mobi;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+2;Mobi;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+2;Mobi;10;Manaus;Loucadora Manaus – Ponta Negra
+3;Spin;1;São Paulo;Unidade São Paulo – Avenida Paulista
+3;Spin;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+3;Spin;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+3;Spin;4;Fortaleza;Racha Fortaleza – Beira Mar
+3;Spin;5;Curitiba;Frost Drive – Curitiba Center
+3;Spin;6;Belo Horizonte;DeLorean BH – Savassi Station
+3;Spin;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+3;Spin;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+3;Spin;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+3;Spin;10;Manaus;Loucadora Manaus – Ponta Negra
+4;HB20;1;São Paulo;Unidade São Paulo – Avenida Paulista
+4;HB20;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+4;HB20;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+4;HB20;4;Fortaleza;Racha Fortaleza – Beira Mar
+4;HB20;5;Curitiba;Frost Drive – Curitiba Center
+4;HB20;6;Belo Horizonte;DeLorean BH – Savassi Station
+4;HB20;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+4;HB20;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+4;HB20;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+4;HB20;10;Manaus;Loucadora Manaus – Ponta Negra
+5;City;1;São Paulo;Unidade São Paulo – Avenida Paulista
+5;City;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+5;City;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+5;City;4;Fortaleza;Racha Fortaleza – Beira Mar
+5;City;5;Curitiba;Frost Drive – Curitiba Center
+5;City;6;Belo Horizonte;DeLorean BH – Savassi Station
+5;City;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+5;City;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+5;City;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+5;City;10;Manaus;Loucadora Manaus – Ponta Negra
+6;City Sedan;1;São Paulo;Unidade São Paulo – Avenida Paulista
+6;City Sedan;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+6;City Sedan;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+6;City Sedan;4;Fortaleza;Racha Fortaleza – Beira Mar
+6;City Sedan;5;Curitiba;Frost Drive – Curitiba Center
+6;City Sedan;6;Belo Horizonte;DeLorean BH – Savassi Station
+6;City Sedan;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+6;City Sedan;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+6;City Sedan;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+6;City Sedan;10;Manaus;Loucadora Manaus – Ponta Negra
+7;Onix;1;São Paulo;Unidade São Paulo – Avenida Paulista
+7;Onix;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+7;Onix;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+7;Onix;4;Fortaleza;Racha Fortaleza – Beira Mar
+7;Onix;5;Curitiba;Frost Drive – Curitiba Center
+7;Onix;6;Belo Horizonte;DeLorean BH – Savassi Station
+7;Onix;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+7;Onix;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+7;Onix;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+7;Onix;10;Manaus;Loucadora Manaus – Ponta Negra
+8;Renegade;1;São Paulo;Unidade São Paulo – Avenida Paulista
+8;Renegade;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+8;Renegade;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+8;Renegade;4;Fortaleza;Racha Fortaleza – Beira Mar
+8;Renegade;5;Curitiba;Frost Drive – Curitiba Center
+8;Renegade;6;Belo Horizonte;DeLorean BH – Savassi Station
+8;Renegade;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+8;Renegade;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+8;Renegade;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+8;Renegade;10;Manaus;Loucadora Manaus – Ponta Negra
+9;T-Cross;1;São Paulo;Unidade São Paulo – Avenida Paulista
+9;T-Cross;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+9;T-Cross;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+9;T-Cross;4;Fortaleza;Racha Fortaleza – Beira Mar
+9;T-Cross;5;Curitiba;Frost Drive – Curitiba Center
+9;T-Cross;6;Belo Horizonte;DeLorean BH – Savassi Station
+9;T-Cross;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+9;T-Cross;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+9;T-Cross;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+9;T-Cross;10;Manaus;Loucadora Manaus – Ponta Negra
+10;Mystery Machine;1;São Paulo;Unidade São Paulo – Avenida Paulista
+10;Mystery Machine;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+10;Mystery Machine;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+10;Mystery Machine;4;Fortaleza;Racha Fortaleza – Beira Mar
+10;Mystery Machine;5;Curitiba;Frost Drive – Curitiba Center
+10;Mystery Machine;6;Belo Horizonte;DeLorean BH – Savassi Station
+10;Mystery Machine;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+10;Mystery Machine;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+10;Mystery Machine;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+10;Mystery Machine;10;Manaus;Loucadora Manaus – Ponta Negra
+11;Batmóvel;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+12;Bumblebee;1;São Paulo;Unidade São Paulo – Avenida Paulista
+12;Bumblebee;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+12;Bumblebee;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+12;Bumblebee;4;Fortaleza;Racha Fortaleza – Beira Mar
+12;Bumblebee;5;Curitiba;Frost Drive – Curitiba Center
+12;Bumblebee;6;Belo Horizonte;DeLorean BH – Savassi Station
+12;Bumblebee;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+12;Bumblebee;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+12;Bumblebee;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+12;Bumblebee;10;Manaus;Loucadora Manaus – Ponta Negra
+13;Baby;1;São Paulo;Unidade São Paulo – Avenida Paulista
+13;Baby;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+13;Baby;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+13;Baby;4;Fortaleza;Racha Fortaleza – Beira Mar
+13;Baby;5;Curitiba;Frost Drive – Curitiba Center
+13;Baby;6;Belo Horizonte;DeLorean BH – Savassi Station
+13;Baby;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+13;Baby;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+13;Baby;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+13;Baby;10;Manaus;Loucadora Manaus – Ponta Negra
+14;DeLorean;1;São Paulo;Unidade São Paulo – Avenida Paulista
+14;DeLorean;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+14;DeLorean;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+14;DeLorean;4;Fortaleza;Racha Fortaleza – Beira Mar
+14;DeLorean;5;Curitiba;Frost Drive – Curitiba Center
+14;DeLorean;6;Belo Horizonte;DeLorean BH – Savassi Station
+14;DeLorean;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+14;DeLorean;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+14;DeLorean;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+14;DeLorean;10;Manaus;Loucadora Manaus – Ponta Negra
+15;Christine;1;São Paulo;Unidade São Paulo – Avenida Paulista
+15;Christine;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+15;Christine;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+15;Christine;4;Fortaleza;Racha Fortaleza – Beira Mar
+15;Christine;5;Curitiba;Frost Drive – Curitiba Center
+15;Christine;6;Belo Horizonte;DeLorean BH – Savassi Station
+15;Christine;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+15;Christine;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+15;Christine;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+15;Christine;10;Manaus;Loucadora Manaus – Ponta Negra
+16;KITT;1;São Paulo;Unidade São Paulo – Avenida Paulista
+16;KITT;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+16;KITT;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+16;KITT;4;Fortaleza;Racha Fortaleza – Beira Mar
+16;KITT;5;Curitiba;Frost Drive – Curitiba Center
+16;KITT;6;Belo Horizonte;DeLorean BH – Savassi Station
+16;KITT;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+16;KITT;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+16;KITT;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+16;KITT;10;Manaus;Loucadora Manaus – Ponta Negra
+17;Herbie;1;São Paulo;Unidade São Paulo – Avenida Paulista
+17;Herbie;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+17;Herbie;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+17;Herbie;4;Fortaleza;Racha Fortaleza – Beira Mar
+17;Herbie;5;Curitiba;Frost Drive – Curitiba Center
+17;Herbie;6;Belo Horizonte;DeLorean BH – Savassi Station
+17;Herbie;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+17;Herbie;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+17;Herbie;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+17;Herbie;10;Manaus;Loucadora Manaus – Ponta Negra
+18;DB5;1;São Paulo;Unidade São Paulo – Avenida Paulista
+18;DB5;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+18;DB5;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+18;DB5;4;Fortaleza;Racha Fortaleza – Beira Mar
+18;DB5;5;Curitiba;Frost Drive – Curitiba Center
+18;DB5;6;Belo Horizonte;DeLorean BH – Savassi Station
+18;DB5;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+18;DB5;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+18;DB5;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+18;DB5;10;Manaus;Loucadora Manaus – Ponta Negra
+19;Ecto-1;1;São Paulo;Unidade São Paulo – Avenida Paulista
+19;Ecto-1;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+19;Ecto-1;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+19;Ecto-1;4;Fortaleza;Racha Fortaleza – Beira Mar
+19;Ecto-1;5;Curitiba;Frost Drive – Curitiba Center
+19;Ecto-1;6;Belo Horizonte;DeLorean BH – Savassi Station
+19;Ecto-1;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+19;Ecto-1;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+19;Ecto-1;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+19;Ecto-1;10;Manaus;Loucadora Manaus – Ponta Negra
+20;Charger R/T;1;São Paulo;Unidade São Paulo – Avenida Paulista
+20;Charger R/T;2;Brasília;Matrix Brasília – Setor Hoteleiro Norte
+20;Charger R/T;3;Rio de Janeiro;Unidade Rio de Janeiro – Copacabana Drive
+20;Charger R/T;4;Fortaleza;Racha Fortaleza – Beira Mar
+20;Charger R/T;5;Curitiba;Frost Drive – Curitiba Center
+20;Charger R/T;6;Belo Horizonte;DeLorean BH – Savassi Station
+20;Charger R/T;7;Rio Branco;Loucadora Acre – Rua Epaminondas Jácome
+20;Charger R/T;8;Guarulhos;Toretto Guarulhos – Aeroporto Internacional
+20;Charger R/T;9;Porto Alegre;Gotham Porto Alegre – Moinhos de Vento
+20;Charger R/T;10;Manaus;Loucadora Manaus – Ponta Negra

@@ -4,10 +4,14 @@ import { Header, Footer, Breadcrumbs, CarCard, CarCardSkeleton } from '../compon
 import { useCars } from '../contexts/CarsContext';
 import { useCategories } from '../contexts/CategoriesContext';
 import { api } from '../services/api';
+import type { Car } from '../types';
 
 export function Search() {
   const [searchParams] = useSearchParams();
   const searchQuery = searchParams.get('q') || '';
+  const locationIdRaw = searchParams.get('locationId');
+  const locationId = locationIdRaw ? parseInt(locationIdRaw, 10) : NaN;
+  const hasValidLocationId = !Number.isNaN(locationId) && locationId > 0;
 
   const { cars, loading: carsLoading } = useCars();
   const { categories, loading: categoriesLoading } = useCategories();
@@ -18,6 +22,20 @@ export function Search() {
 
   useEffect(() => {
     const performSearch = async () => {
+      if (hasValidLocationId) {
+        setIsSearching(true);
+        try {
+          const results = await api.getCarsByLocation(locationId);
+          setSearchResults(results);
+        } catch (error) {
+          console.error('Erro ao buscar carros por local:', error);
+          setSearchResults([]);
+        } finally {
+          setIsSearching(false);
+        }
+        return;
+      }
+
       if (searchQuery) {
         setIsSearching(true);
         try {
@@ -33,12 +51,13 @@ export function Search() {
         setSearchResults([]);
       }
     };
-    
-    performSearch();
-  }, [searchQuery]);
 
-  // Usar searchResults quando houver busca, senão usar todos os carros
-  const carsToFilter = searchQuery ? searchResults : cars;
+    performSearch();
+  }, [searchQuery, hasValidLocationId, locationId]);
+
+  // Com locationId ou texto de busca: usar resultados da API; senão, catálogo completo do contexto
+  const carsToFilter =
+    hasValidLocationId || searchQuery ? searchResults : cars;
 
   // Filter and sort logic
   const filteredCars = useMemo(() => {
@@ -69,7 +88,9 @@ export function Search() {
         {/* Header */}
         <div className="mb-8">
           <h1 className="font-heading text-heading-xl lg:text-heading-xxl text-neutral-black mb-2">
-            {searchQuery ? `Veículos disponíveis em "${searchQuery}"` : 'Todos os Veículos'}
+            {hasValidLocationId || searchQuery
+              ? `Veículos disponíveis${searchQuery ? ` em "${searchQuery}"` : ''}`
+              : 'Todos os Veículos'}
           </h1>
           <p className="text-body-md text-neutral-text">
             {filteredCars.length} {filteredCars.length === 1 ? 'veículo disponível' : 'veículos disponíveis'}

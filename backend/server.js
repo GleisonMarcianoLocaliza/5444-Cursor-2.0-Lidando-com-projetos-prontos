@@ -5,6 +5,7 @@ const path = require('path');
 const { initDatabase } = require('./database');
 const { seedDatabase } = require('./seed');
 const { seedLocations } = require('./seed-locations');
+const { seedCarLocations } = require('./seed-car-locations');
 
 // Importar rotas
 const categoriesRoutes = require('./routes/categories');
@@ -63,6 +64,7 @@ const startServer = async () => {
     console.log('🌱 Executando seeds do banco de dados...');
     await seedDatabase(false); // Não fechar conexão pois o servidor ainda vai usar
     await seedLocations(false); // Não fechar conexão pois o servidor ainda vai usar
+    await seedCarLocations(false); // Vínculos carro–local após cars e locations
     console.log('✅ Seeds executados com sucesso!');
     
     // Iniciar servidor
