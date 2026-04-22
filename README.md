@@ -9,7 +9,7 @@ Domine o Cursor 2.0 para trabalhar com projetos prontos de forma rápida e intel
 
 # 🚗 Locadora Loucadora
 
-Sistema de locação de carros desenvolvido com React (frontend) e Node.js (backend).
+Sistema de locação de veículos desenvolvido com React (frontend) e Node.js (backend).
 
 
 https://github.com/user-attachments/assets/11bd545a-c3a9-4787-b814-da90507296e0
@@ -91,7 +91,7 @@ npm run backend:seed
 ### Backend (`/backend`)
 - `controllers/` - Controladores da API
 - `routes/` - Definição das rotas
-- `database/` - Dados e imagens dos carros
+- `database/` - Dados e imagens dos veículos
 - `database.js` - Configuração do banco SQLite
 - `server.js` - Servidor Express
 - `seed.js` - Script para popular banco
@@ -117,13 +117,13 @@ npm run backend:seed
 
 ## 📝 API Endpoints
 
-### Carros
-- `GET /car` - Listar todos os carros
-- `GET /car/:id` - Buscar carro por ID
-- `GET /car?categoryId=:id` - Carros por categoria
-- `POST /car` - Criar novo carro
-- `PUT /car/:id` - Atualizar carro
-- `DELETE /car/:id` - Deletar carro
+### Veículos
+- `GET /car` - Listar todos os veículos
+- `GET /car/:id` - Buscar veículo por ID
+- `GET /car?categoryId=:id` - Veículos por categoria
+- `POST /car` - Criar novo veículo
+- `PUT /car/:id` - Atualizar veículo
+- `DELETE /car/:id` - Deletar veículo
 
 ### Categorias
 - `GET /category` - Listar categorias

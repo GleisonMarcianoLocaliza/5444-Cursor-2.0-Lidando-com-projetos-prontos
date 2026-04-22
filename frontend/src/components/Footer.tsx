@@ -17,7 +17,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-body-sm text-white/90 text-center lg:text-left">
-              O carro ideal para sua ocasião
+              O veículo ideal para sua ocasião
             </p>
           </div>
 

@@ -51,6 +51,18 @@ export const api = {
     return response.json();
   },
 
+  /** Requer JWT — categorias a partir dos favoritos; sem favoritos, comportamento similar ao random */
+  async getRecommendedCars(limit: number = 6): Promise<Car[]> {
+    const response = await fetch(
+      `${API_BASE_URL}/car/recommended?limit=${limit}`,
+      { headers: getAuthHeaders() }
+    );
+    if (!response.ok) {
+      throw new Error('Failed to fetch recommended cars');
+    }
+    return response.json();
+  },
+
   async getCarById(id: number): Promise<Car> {
     const response = await fetch(`${API_BASE_URL}/car/${id}`);
     if (!response.ok) {

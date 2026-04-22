@@ -71,7 +71,7 @@ const startServer = async () => {
     app.listen(PORT, () => {
       console.log(`🚀 Servidor rodando na porta ${PORT}`);
       console.log(`📊 Health check: http://localhost:${PORT}/health`);
-      console.log(`🚗 API de carros: http://localhost:${PORT}/car`);
+      console.log(`🚗 API de veículos: http://localhost:${PORT}/car`);
       console.log(`📂 API de categorias: http://localhost:${PORT}/category`);
       console.log(`🖼️  Imagens: http://localhost:${PORT}/car-models/`);
     });

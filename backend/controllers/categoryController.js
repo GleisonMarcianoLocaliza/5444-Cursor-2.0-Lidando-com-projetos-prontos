@@ -96,7 +96,7 @@ const deleteCategory = async (req, res) => {
     const carsInCategory = await allQuery('SELECT id FROM cars WHERE categoryId = ?', [id]);
     if (carsInCategory.length > 0) {
       return res.status(400).json({ 
-        error: 'Não é possível deletar categoria que possui carros associados' 
+        error: 'Não é possível deletar categoria que possui veículos associados' 
       });
     }
     

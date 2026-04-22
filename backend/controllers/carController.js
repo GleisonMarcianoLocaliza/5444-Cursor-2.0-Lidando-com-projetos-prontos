@@ -59,7 +59,7 @@ const getAllCars = async (req, res) => {
     
     res.json(parsedCars);
   } catch (error) {
-    console.error('Erro ao buscar carros:', error);
+    console.error('Erro ao buscar veículos:', error);
     res.status(500).json({ error: 'Erro interno do servidor' });
   }
 };
@@ -130,7 +130,7 @@ const getRecommendedCars = async (req, res) => {
 
     res.json(parseCarsJson(cars));
   } catch (error) {
-    console.error('Erro ao buscar carros recomendados:', error);
+    console.error('Erro ao buscar veículos recomendados:', error);
     res.status(500).json({ error: 'Erro interno do servidor' });
   }
 };
@@ -150,7 +150,7 @@ const getRandomCars = async (req, res) => {
 
     res.json(parseCarsJson(cars));
   } catch (error) {
-    console.error('Erro ao buscar carros aleatórios:', error);
+    console.error('Erro ao buscar veículos aleatórios:', error);
     res.status(500).json({ error: 'Erro interno do servidor' });
   }
 };
@@ -162,7 +162,7 @@ const getCarById = async (req, res) => {
     const car = await getQuery('SELECT * FROM cars WHERE id = ?', [id]);
     
     if (!car) {
-      return res.status(404).json({ error: 'Carro não encontrado' });
+      return res.status(404).json({ error: 'Veículo não encontrado' });
     }
     
     // Parsear JSON fields
@@ -174,7 +174,7 @@ const getCarById = async (req, res) => {
     
     res.json(parsedCar);
   } catch (error) {
-    console.error('Erro ao buscar carro:', error);
+    console.error('Erro ao buscar veículo:', error);
     res.status(500).json({ error: 'Erro interno do servidor' });
   }
 };
@@ -230,7 +230,7 @@ const createCar = async (req, res) => {
     
     res.status(201).json(parsedCar);
   } catch (error) {
-    console.error('Erro ao criar carro:', error);
+    console.error('Erro ao criar veículo:', error);
     res.status(500).json({ error: 'Erro interno do servidor error: ' + error.message });
   }
 };
@@ -244,7 +244,7 @@ const updateCar = async (req, res) => {
     // Verificar se o carro existe
     const existingCar = await getQuery('SELECT * FROM cars WHERE id = ?', [id]);
     if (!existingCar) {
-      return res.status(404).json({ error: 'Carro não encontrado' });
+      return res.status(404).json({ error: 'Veículo não encontrado' });
     }
     
     // Validação
@@ -293,7 +293,7 @@ const updateCar = async (req, res) => {
     
     res.json(parsedCar);
   } catch (error) {
-    console.error('Erro ao atualizar carro:', error);
+    console.error('Erro ao atualizar veículo:', error);
     res.status(500).json({ error: 'Erro interno do servidor' });
   }
 };
@@ -306,13 +306,13 @@ const deleteCar = async (req, res) => {
     // Verificar se o carro existe
     const existingCar = await getQuery('SELECT * FROM cars WHERE id = ?', [id]);
     if (!existingCar) {
-      return res.status(404).json({ error: 'Carro não encontrado' });
+      return res.status(404).json({ error: 'Veículo não encontrado' });
     }
     
     await runQuery('DELETE FROM cars WHERE id = ?', [id]);
     res.status(204).send();
   } catch (error) {
-    console.error('Erro ao deletar carro:', error);
+    console.error('Erro ao deletar veículo:', error);
     res.status(500).json({ error: 'Erro interno do servidor' });
   }
 };

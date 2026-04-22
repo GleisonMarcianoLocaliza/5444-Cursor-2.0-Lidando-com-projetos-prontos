@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLocations } from '../contexts/LocationsContext';
 import { useSearch } from '../contexts/SearchContext';
-import { MdLocationOn, MdCalendarToday, MdArrowDropDown } from 'react-icons/md';
+import { MdLocationOn, MdArrowDropDown } from 'react-icons/md';
 
 export function SearchBox() {
   const navigate = useNavigate();

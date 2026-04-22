@@ -120,7 +120,7 @@ export function Detail() {
 	return (
 		<div className='min-h-screen bg-neutral-background'>
 			<Header />
-			<Breadcrumbs items={[{ label: 'Carros', path: '/' }, { label: car.title }]} />
+			<Breadcrumbs items={[{ label: 'Veículos', path: '/' }, { label: car.title }]} />
 
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12'>
 				<div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
@@ -144,7 +144,7 @@ export function Detail() {
 								{/* Info */}
 								<div className='flex-1'>
 									<span className='inline-block bg-primary-light text-primary-pure text-body-sm font-medium px-3 py-1 rounded-full mb-3'>
-										{category?.title || 'Carro'}
+										{category?.title || 'Veículo'}
 									</span>
 									<h1 className='font-heading text-heading-lg lg:text-heading-xl text-neutral-black mb-3'>
 										{car.title}

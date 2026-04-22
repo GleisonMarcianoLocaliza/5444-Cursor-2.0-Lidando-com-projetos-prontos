@@ -25,7 +25,7 @@ export function Favorites() {
               Faça login para ver seus favoritos
             </h1>
             <p className="text-neutral-text">
-              Entre na sua conta para acessar seus carros favoritos.
+              Entre na sua conta para acessar seus veículos favoritos.
             </p>
           </div>
         </div>
@@ -56,8 +56,8 @@ export function Favorites() {
           </div>
           <p className="text-neutral-text">
             {favorites.length === 0 
-              ? 'Você ainda não tem carros favoritos'
-              : `${favorites.length} carro${favorites.length !== 1 ? 's' : ''} favoritado${favorites.length !== 1 ? 's' : ''}`
+              ? 'Você ainda não tem veículos favoritos'
+              : `${favorites.length} veículo${favorites.length !== 1 ? 's' : ''} favoritado${favorites.length !== 1 ? 's' : ''}`
             }
           </p>
         </div>
@@ -77,14 +77,14 @@ export function Favorites() {
               Nenhum favorito ainda
             </h2>
             <p className="text-neutral-text mb-6">
-              Comece favoritando carros que você gostar!
+              Comece favoritando veículos que você gostar!
             </p>
             <Link
               to="/"
               className="inline-flex items-center gap-2 px-4 py-2 bg-primary-pure text-white rounded-lg hover:bg-primary-dark transition-colors"
             >
               <MdHome className="w-4 h-4" />
-              Ver carros disponíveis
+              Ver veículos disponíveis
             </Link>
           </div>
         )}

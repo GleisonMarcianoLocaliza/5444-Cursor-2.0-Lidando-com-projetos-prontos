@@ -15,7 +15,7 @@ Após implementar qualquer nova função, confirme os seguintes itens da página
 - [ ] A home carrega sem erros no console do navegador em http://localhost:5173
 - [ ] O `Header` e o `Footer` são renderizados corretamente
 - [ ] O `SearchBox` e o `Banner` aparecem na página
-- [ ] A seção "Carros Disponíveis" exibe os cards ou o skeleton de carregamento
+- [ ] A seção "Veículos Disponíveis" exibe os cards ou o skeleton de carregamento
 - [ ] A chamada `getRandomCars(6)` via `CarsContext` não retorna erro
 - [ ] O backend responde em http://localhost:3001/health
 
@@ -30,7 +30,7 @@ A Home depende destes componentes e contextos — qualquer mudança neles exige 
 ## Como verificar rapidamente
 
 1. Abra http://localhost:5173 no navegador
-2. Confirme que os carros são exibidos (ou o skeleton durante o carregamento)
+2. Confirme que os veículos são exibidos (ou o skeleton durante o carregamento)
 3. Abra o DevTools → Console e certifique-se de que não há erros em vermelho relacionados à Home
 
 Se qualquer item falhar, corrija antes de finalizar a implementação.

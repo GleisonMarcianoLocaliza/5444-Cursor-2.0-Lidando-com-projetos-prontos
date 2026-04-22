@@ -28,7 +28,7 @@ export function Search() {
           const results = await api.getCarsByLocation(locationId);
           setSearchResults(results);
         } catch (error) {
-          console.error('Erro ao buscar carros por local:', error);
+          console.error('Erro ao buscar veículos por local:', error);
           setSearchResults([]);
         } finally {
           setIsSearching(false);
@@ -42,7 +42,7 @@ export function Search() {
           const results = await api.searchCars(searchQuery);
           setSearchResults(results);
         } catch (error) {
-          console.error('Erro ao buscar carros:', error);
+          console.error('Erro ao buscar veículos:', error);
           setSearchResults([]);
         } finally {
           setIsSearching(false);

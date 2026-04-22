@@ -3,12 +3,12 @@
     {
       "id": "1",
       "title": "Sedan",
-      "description": "Carros sedãs confortáveis e espaçosos, ideais para viagens longas e famílias"
+      "description": "Veículos sedãs confortáveis e espaçosos, ideais para viagens longas e famílias"
     },
     {
       "id": "2",
       "title": "Hatch",
-      "description": "Carros compactos e econômicos, perfeitos para uso urbano e estacionamento fácil"
+      "description": "Veículos compactos e econômicos, perfeitos para uso urbano e estacionamento fácil"
     },
     {
       "id": "3",
@@ -23,7 +23,7 @@
     {
       "id": "5",
       "title": "Cultura Pop",
-      "description": "Carros icônicos do cinema, TV e cultura pop que marcaram gerações"
+      "description": "Veículos icônicos do cinema, TV e cultura pop que marcaram gerações"
     }
   ],
   "car": [
@@ -348,7 +348,7 @@
       "id": "13",
       "title": "Chevrolet Impala 1967",
       "shortTitle": "Baby",
-      "description": "O carro quase tão importante quanto os irmãos Winchester - Supernatural",
+      "description": "O veículo quase tão importante quanto os irmãos Winchester - Supernatural",
       "categoryId": 5,
       "price": 450,
       "image": "/car-models/chevrolet_impala_1967.png",
@@ -398,7 +398,7 @@
       "id": "15",
       "title": "Plymouth Fury 1958",
       "shortTitle": "Christine",
-      "description": "Um carro com vontade própria... e sede de sangue",
+      "description": "Um veículo com vontade própria... e sede de sangue",
       "categoryId": 5,
       "price": 350,
       "image": "/car-models/plymouth_fury_1958.png",
@@ -423,7 +423,7 @@
       "id": "16",
       "title": "Pontiac Trans Am 1982",
       "shortTitle": "KITT",
-      "description": "O carro falante mais inteligente da TV - A Super Máquina",
+      "description": "O veículo falante mais inteligente da TV - A Super Máquina",
       "categoryId": 5,
       "price": 600,
       "image": "/car-models/pontiac_trans_am_1982.png",
@@ -466,7 +466,7 @@
         "Emoções",
         "Proteção ao dono",
         "Design clássico",
-        "Alma de carro"
+        "Alma de veículo"
       ]
     },
     {

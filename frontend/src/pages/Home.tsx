@@ -1,31 +1,47 @@
 import { Header, Footer, SearchBox, CarCard, CarCardSkeleton, Banner } from '../components';
 import { useCars } from '../contexts/CarsContext';
+import { useAuth } from '../contexts/AuthContext';
+import { api } from '../services/api';
 import { useState, useEffect } from 'react';
 import type { Car } from '../types';
 
 export function Home() {
   const { getRandomCars } = useCars();
+  const { isAuthenticated, isLoading: authLoading } = useAuth();
   const [randomCars, setRandomCars] = useState<Car[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchRandomCars = async () => {
+    if (authLoading) {
+      return;
+    }
+
+    const fetchCars = async () => {
       try {
         setLoading(true);
         setError(null);
-        const cars = await getRandomCars(6);
+        let cars: Car[];
+        if (isAuthenticated) {
+          try {
+            cars = await api.getRecommendedCars(6);
+          } catch {
+            cars = await getRandomCars(6);
+          }
+        } else {
+          cars = await getRandomCars(6);
+        }
         setRandomCars(cars);
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Erro ao carregar carros');
-        console.error('Error fetching random cars:', err);
+        setError(err instanceof Error ? err.message : 'Erro ao carregar veículos');
+        console.error('Error fetching cars for home:', err);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchRandomCars();
-  }, [getRandomCars]);
+    fetchCars();
+  }, [getRandomCars, isAuthenticated, authLoading]);
 
   return (
     <div className="min-h-screen bg-neutral-background">
@@ -36,7 +52,7 @@ export function Home() {
       {/* Car Cards Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="font-heading text-heading-lg text-neutral-black mb-8">
-          Carros Disponíveis
+          Veículos Disponíveis
         </h2>
 
         {loading ? (

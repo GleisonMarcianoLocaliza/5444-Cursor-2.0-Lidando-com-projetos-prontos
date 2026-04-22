@@ -165,7 +165,7 @@ const createReservation = async (req, res) => {
     // Verificar se o carro existe
     const car = await getQuery('SELECT id FROM cars WHERE id = ?', [carId]);
     if (!car) {
-      return res.status(404).json({ error: 'Carro não encontrado' });
+      return res.status(404).json({ error: 'Veículo não encontrado' });
     }
 
     // Criar reserva

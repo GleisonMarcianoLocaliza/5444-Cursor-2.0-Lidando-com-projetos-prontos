@@ -12,7 +12,7 @@ const locations = [
   {
     name: 'Matrix Brasília – Setor Hoteleiro Norte',
     address: 'SHN Quadra 2, Bloco D – Brasília/DF',
-    description: 'Escolha o carro vermelho e descubra quão fundo vai o buraco da garagem.',
+    description: 'Escolha o veículo vermelho e descubra quão fundo vai o buraco da garagem.',
     emoji: '💾',
     city: 'Brasília',
     state: 'DF'
@@ -68,7 +68,7 @@ const locations = [
   {
     name: 'Gotham Porto Alegre – Moinhos de Vento',
     address: 'Rua Padre Chagas, 420 – Porto Alegre/RS',
-    description: 'Alugue um carro. Vá salvar a noite.',
+    description: 'Alugue um veículo. Vá salvar a noite.',
     emoji: '🦇',
     city: 'Porto Alegre',
     state: 'RS'

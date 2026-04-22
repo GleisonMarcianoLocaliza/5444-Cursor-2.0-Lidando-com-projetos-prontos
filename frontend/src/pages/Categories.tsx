@@ -24,7 +24,7 @@ export function Categories() {
             Escolha por Categoria
           </h1>
           <p className="text-body-lg text-neutral-text max-w-3xl">
-            Encontre o carro perfeito para sua necessidade. Navegue pelas categorias e descubra
+            Encontre o veículo perfeito para sua necessidade. Navegue pelas categorias e descubra
             nossa frota completa de veículos disponíveis para locação.
           </p>
         </div>

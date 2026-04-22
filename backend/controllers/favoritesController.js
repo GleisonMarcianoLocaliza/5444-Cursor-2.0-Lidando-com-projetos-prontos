@@ -29,7 +29,7 @@ const addFavorite = async (req, res) => {
     // Verificar se o carro existe
     const car = await getQuery('SELECT id FROM cars WHERE id = ?', [carId]);
     if (!car) {
-      return res.status(404).json({ error: 'Carro não encontrado' });
+      return res.status(404).json({ error: 'Veículo não encontrado' });
     }
 
     // Verificar se já é favorito
@@ -39,7 +39,7 @@ const addFavorite = async (req, res) => {
     );
 
     if (existingFavorite) {
-      return res.status(400).json({ error: 'Carro já está nos favoritos' });
+      return res.status(400).json({ error: 'Veículo já está nos favoritos' });
     }
 
     // Adicionar favorito
@@ -48,7 +48,7 @@ const addFavorite = async (req, res) => {
       [userId, carId]
     );
 
-    res.status(201).json({ message: 'Carro adicionado aos favoritos' });
+    res.status(201).json({ message: 'Veículo adicionado aos favoritos' });
   } catch (error) {
     console.error('Erro ao adicionar favorito:', error);
     res.status(500).json({ error: 'Erro interno do servidor' });
@@ -77,7 +77,7 @@ const removeFavorite = async (req, res) => {
       [userId, carId]
     );
 
-    res.json({ message: 'Carro removido dos favoritos' });
+    res.json({ message: 'Veículo removido dos favoritos' });
   } catch (error) {
     console.error('Erro ao remover favorito:', error);
     res.status(500).json({ error: 'Erro interno do servidor' });

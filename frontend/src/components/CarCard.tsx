@@ -25,7 +25,7 @@ export const CarCard = memo(function CarCard({ id, title, shortTitle, price, ima
     if (!isAuthenticated) {
       // Aqui você pode abrir o modal de login
       // Por enquanto, apenas mostra um alert
-      alert('Faça login para favoritar carros');
+      alert('Faça login para favoritar veículos');
       return;
     }
 
@@ -38,7 +38,7 @@ export const CarCard = memo(function CarCard({ id, title, shortTitle, price, ima
       }
     } catch (error) {
       console.error('Erro ao favoritar:', error);
-      alert('Erro ao favoritar carro');
+      alert('Erro ao favoritar veículo');
     } finally {
       setIsLoading(false);
     }

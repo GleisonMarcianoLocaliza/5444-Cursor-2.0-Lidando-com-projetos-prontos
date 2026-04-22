@@ -1,7 +1,7 @@
 {
   "name": "locadora-loucadora",
   "version": "1.0.0",
-  "description": "Sistema de locação de carros - Loucadora",
+  "description": "Sistema de locação de veículos - Loucadora",
   "scripts": {
     "dev": "npm run backend:seed && concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
     "backend:dev": "cd backend && npm run dev",
@@ -13,7 +13,7 @@
   },
   "keywords": [
     "locadora",
-    "carros",
+    "veiculos",
     "react",
     "nodejs",
     "sqlite"

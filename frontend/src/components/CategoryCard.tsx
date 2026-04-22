@@ -14,7 +14,7 @@ export const CategoryCard = memo(function CategoryCard({ id, title, description,
     <Link
       to={`/categories/${id}`}
       className="group relative bg-neutral-white rounded-lg shadow-elevation-1 hover:shadow-elevation-3 transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary-pure focus:ring-offset-2"
-      aria-label={`Ver ${carCount} ${carCount === 1 ? 'carro' : 'carros'} da categoria ${title}`}
+      aria-label={`Ver ${carCount} ${carCount === 1 ? 'veículo' : 'veículos'} da categoria ${title}`}
     >
       {/* Decorative Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-light/20 to-transparent group-hover:from-primary-pure/30 transition-colors" aria-hidden="true" />
@@ -39,7 +39,7 @@ export const CategoryCard = memo(function CategoryCard({ id, title, description,
         {/* Footer */}
         <div className="flex items-center justify-between">
           <span className="text-body-sm text-neutral-text">
-            {carCount} {carCount === 1 ? 'carro' : 'carros'} disponíveis
+            {carCount} {carCount === 1 ? 'veículo' : 'veículos'} disponíveis
           </span>
 
           <div className="w-8 h-8 bg-primary-pure rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform" aria-hidden="true">

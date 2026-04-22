@@ -1,7 +1,7 @@
 {
   "info": {
     "name": "Locadora — Auth e GET /car/recommended",
-    "description": "Collection para testar autenticação e o endpoint de carros recomendados.\n\n**Uso:**\n1. Confirme `baseUrl` (padrão `http://localhost:3001`).\n2. Ajuste `testEmail` e `testPassword` se necessário.\n3. Execute **Login** primeiro — o token JWT é salvo automaticamente na variável `token`.\n4. Execute as demais requisições autenticadas.\n\n**Insomnia:** Arquivo → Importar → cole este JSON (formato Postman v2.1).\n\n**Postman:** Import → upload deste arquivo.\n\nCredenciais padrão são apenas para ambiente local de desenvolvimento.",
+    "description": "Collection para testar autenticação e o endpoint de veículos recomendados.\n\n**Uso:**\n1. Confirme `baseUrl` (padrão `http://localhost:3001`).\n2. Ajuste `testEmail` e `testPassword` se necessário.\n3. Execute **Login** primeiro — o token JWT é salvo automaticamente na variável `token`.\n4. Execute as demais requisições autenticadas.\n\n**Insomnia:** Arquivo → Importar → cole este JSON (formato Postman v2.1).\n\n**Postman:** Import → upload deste arquivo.\n\nCredenciais padrão são apenas para ambiente local de desenvolvimento.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
@@ -143,10 +143,10 @@
       "description": "Rotas em `/auth`. Use **Login** para obter e guardar o JWT."
     },
     {
-      "name": "Carros",
+      "name": "Veículos",
       "item": [
         {
-          "name": "Carros recomendados (favoritos)",
+          "name": "Veículos recomendados (favoritos)",
           "request": {
             "auth": {
               "type": "bearer",
@@ -155,12 +155,12 @@
             "method": "GET",
             "header": [],
             "url": "{{baseUrl}}/car/recommended?limit={{recommendedLimit}}",
-            "description": "**GET /car/recommended** — Requer autenticação.\n\n- Com favoritos: até `limit` carros da categoria mais frequente entre os últimos 6 favoritos.\n- Sem favoritos: carros aleatórios (como `/car/random`).\n\nQuery opcional: `limit` (padrão 6, máximo 50)."
+            "description": "**GET /car/recommended** — Requer autenticação.\n\n- Com favoritos: até `limit` veículos da categoria mais frequente entre os últimos 6 favoritos.\n- Sem favoritos: veículos aleatórios (como `/car/random`).\n\nQuery opcional: `limit` (padrão 6, máximo 50)."
           },
           "response": []
         },
         {
-          "name": "Carros recomendados (sem query — padrão backend)",
+          "name": "Veículos recomendados (sem query — padrão backend)",
           "request": {
             "auth": {
               "type": "bearer",
